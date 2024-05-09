@@ -1,39 +1,31 @@
-The Open Motion Planning Library (OMPL)
-=======================================
-
-Continuous Integration Status
------------------------------
-
-[![Build](https://github.com/ompl/ompl/actions/workflows/build.yml/badge.svg?branch=pr-github-actions)](https://github.com/ompl/ompl/actions/workflows/build.yml)
-[![Format](https://github.com/ompl/ompl/actions/workflows/format.yml/badge.svg?branch=pr-github-actions)](https://github.com/ompl/ompl/actions/workflows/format.yml?branch=pr-github-actions)
-
-Installation
-------------
-
-Visit the [OMPL installation page](https://ompl.kavrakilab.org/core/installation.html) for
-detailed installation instructions.
-
-OMPL has the following required dependencies:
-
-* [Boost](https://www.boost.org) (version 1.58 or higher)
-* [CMake](https://www.cmake.org) (version 3.12 or higher)
-* [Eigen](http://eigen.tuxfamily.org) (version 3.3 or higher)
-
-The following dependencies are optional:
-
-* [Py++](https://github.com/ompl/ompl/blob/main/doc/markdown/installPyPlusPlus.md) (needed to generate Python bindings)
-* [Doxygen](http://www.doxygen.org) (needed to create a local copy of the documentation at
-  https://ompl.kavrakilab.org/core)
-* [Flann](https://github.com/flann-lib/flann/tree/1.9.2) (FLANN can be used for nearest neighbor queries by OMPL)
-* [Spot](http://spot.lrde.epita.fr) (Used for constructing finite automata from LTL formulae.)
-
-Once dependencies are installed, you can build OMPL on Linux, macOS,
-and MS Windows. Go to the top-level directory of OMPL and type the
-following commands:
-
-    mkdir -p build/Release
-    cd build/Release
-    cmake ../..
-    # next step is optional
-    make -j 4 update_bindings # if you want Python bindings
-    make -j 4 # replace "4" with the number of cores on your machine
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开放运动规划库 (OMPL)</font></font></h1><a id="user-content-the-open-motion-planning-library-ompl" class="anchor" aria-label="永久链接：开放运动规划库 (OMPL)" href="#the-open-motion-planning-library-ompl"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">持续集成状态</font></font></h2><a id="user-content-continuous-integration-status" class="anchor" aria-label="永久链接：持续集成状态" href="#continuous-integration-status"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/ompl/ompl/actions/workflows/build.yml"><img src="https://github.com/ompl/ompl/actions/workflows/build.yml/badge.svg?branch=pr-github-actions" alt="建造" style="max-width: 100%;"></a>
+<a href="https://github.com/ompl/ompl/actions/workflows/format.yml?branch=pr-github-actions"><img src="https://github.com/ompl/ompl/actions/workflows/format.yml/badge.svg?branch=pr-github-actions" alt="格式" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请访问</font></font><a href="https://ompl.kavrakilab.org/core/installation.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OMPL 安装页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以获取详细的安装说明。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OMPL 具有以下必需的依赖项：</font></font></p>
+<ul dir="auto">
+<li><a href="https://www.boost.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Boost</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（1.58 或更高版本）</font></font></li>
+<li><a href="https://www.cmake.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMake</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（版本 3.12 或更高版本）</font></font></li>
+<li><a href="http://eigen.tuxfamily.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eigen</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3.3 或更高版本）</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下依赖项是可选的：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/ompl/ompl/blob/main/doc/markdown/installPyPlusPlus.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Py++</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（生成 Python 绑定所需）</font></font></li>
+<li><a href="http://www.doxygen.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doxygen （需要在</font></font></a><font style="vertical-align: inherit;"></font><a href="https://ompl.kavrakilab.org/core" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://ompl.kavrakilab.org/core</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建文档的本地副本
+</font><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://github.com/flann-lib/flann/tree/1.9.2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flann</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（FLANN 可用于 OMPL 的最近邻查询）</font></font></li>
+<li><a href="http://spot.lrde.epita.fr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（用于从 LTL 公式构造有限自动机。）</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装依赖项后，您可以在 Linux、macOS 和 MS Windows 上构建 OMPL。进入 OMPL 的顶级目录并输入以下命令：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>mkdir -p build/Release
+cd build/Release
+cmake ../..
+# next step is optional
+make -j 4 update_bindings # if you want Python bindings
+make -j 4 # replace "4" with the number of cores on your machine
+</code></pre><div class="zeroclipboard-container">
+     
+  </div></div>
+</article></div>
